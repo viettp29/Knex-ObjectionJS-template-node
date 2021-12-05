@@ -2,11 +2,13 @@
 import express from "express";
 const app = express();
 require("dotenv").config();
+
 // import routes
 const indexRouter = require("./routers/index.router");
 const employee = require("./routers/employee.router");
 const customer = require("./routers/customer.router");
 const users = require("./routers/user.router");
+
 // bodyParser
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
